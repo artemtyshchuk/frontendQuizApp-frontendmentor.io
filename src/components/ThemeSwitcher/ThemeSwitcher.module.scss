@@ -1,0 +1,86 @@
+:global {
+  body[data-theme="light"] {
+    --switched-color: var(--purple);
+  }
+  body[data-theme="dark"] {
+    --switched-color: var(--purple);
+  }
+}
+
+.themeSwitcherWrapper {
+  justify-content: end;
+  display: grid;
+}
+
+.themeSwitcher {
+  display: inline-block;
+  position: relative;
+  width: 48px;
+  height: 28px;
+  background-color: transparent;
+  margin-right: 31px;
+}
+
+.input {
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 999px;
+
+  background-color: var(--switched-color);
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  left: 5px;
+  bottom: 4.5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  transition: 0.3s;
+}
+
+.sunIcon {
+  position: absolute;
+  bottom: 2px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin-left: -34px;
+}
+
+.moonIcon {
+  position: absolute;
+  bottom: 2px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin-left: 58px;
+}
+
+input:checked + .slider {
+  background-color: var(--purple);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--purple);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+  transition: 0.3s;
+}
