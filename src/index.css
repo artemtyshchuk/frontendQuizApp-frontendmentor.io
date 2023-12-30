@@ -41,3 +41,7 @@ body[data-theme="dark"] {
 a {
   font-family: "Rubik", monospace;
 }
+
+input[type="radio"] {
+  appearance: none;
+}

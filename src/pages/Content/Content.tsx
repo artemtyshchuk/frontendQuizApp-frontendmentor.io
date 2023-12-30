@@ -27,7 +27,7 @@ export const Content = ({}: ContentProps) => {
   return (
     <div className={styles.content}>
       {!subject && (
-        <WelcomePage onRatioButton={handleStartButton} userChoise={subject} />
+        <WelcomePage onRadioButton={handleStartButton} userChoise={subject} />
       )}
     </div>
   );

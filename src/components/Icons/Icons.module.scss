@@ -1,1 +1,27 @@
-.icons {}
+.icons {
+  width: 56px;
+  height: 56px;
+  border-radius: 5px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.html {
+  background-color: #fff1e9;
+  background-repeat: no-repeat;
+}
+
+.css {
+  background-color: #e0fdef;
+  background-repeat: no-repeat;
+}
+
+.javascript {
+  background-color: #ebf0ff;
+  background-repeat: no-repeat;
+}
+.accessibility {
+  background-color: #f6e7ff;
+  background-repeat: no-repeat;
+}

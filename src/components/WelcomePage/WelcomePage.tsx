@@ -4,12 +4,12 @@ import data from "data.json";
 
 interface WelcomePageProps {
   userChoise: string;
-  onRatioButton: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onRadioButton: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const WelcomePage = ({
   userChoise,
-  onRatioButton,
+  onRadioButton,
 }: WelcomePageProps) => {
   return (
     <div className={styles.welcomePage}>
@@ -22,18 +22,21 @@ export const WelcomePage = ({
         {data.quizzes.map((subject, index) => (
           <div className={styles.subjectContainer} key={index}>
             <input
-              type="ratio"
+              type="radio"
               name="subject"
               className={styles.subject}
               id={subject.title}
               value={subject.title}
               checked={userChoise === subject.title}
-              onChange={onRatioButton}
+              onChange={onRadioButton}
               readOnly
             />
-            {/* <label htmlFor={subject.title}>
-              <Icons subject={subject.title} />
-            </label> */}
+            <label className={styles.label} htmlFor={subject.title}>
+              <div className={styles.icon}>
+                <Icons subject={subject.title} />
+              </div>
+              <p className={styles.iconText}> {subject.title}</p>
+            </label>
           </div>
         ))}
       </div>
