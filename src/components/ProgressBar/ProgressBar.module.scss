@@ -1,7 +1,17 @@
-.progressBar {
+:global {
+  body[data-theme="light"] {
+    --progressBarContainer: var(--white);
+  }
+  body[data-theme="dark"] {
+    --progressBarContainer: var(--navy);
+  }
+}
+
+.progressBarContainer {
+  padding: 4px;
   width: 100%;
   height: 16px;
-  background-color: var(--white);
+  background-color: var(--progressBarContainer);
   border-radius: 999px;
 }
 

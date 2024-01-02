@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Question } from "types/data";
 import data from "data.json";
 import { Quiz } from "components/Quiz";
+import { Header } from "components/Header";
 interface ContentProps {}
 
 export const Content = ({}: ContentProps) => {
@@ -63,6 +64,8 @@ export const Content = ({}: ContentProps) => {
 
   return (
     <div className={styles.content}>
+      <Header subject={subject} />
+
       {!subject && (
         <WelcomePage onRadioButton={handleStartButton} userChoise={subject} />
       )}

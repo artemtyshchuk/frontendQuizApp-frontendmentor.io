@@ -32,10 +32,10 @@ export const WelcomePage = ({
               readOnly
             />
             <label className={styles.label} htmlFor={subject.title}>
-              <div className={styles.icon}>
+              <div>
                 <Icons subject={subject.title} />
               </div>
-              <p className={styles.iconText}> {subject.title}</p>
+              <p className={styles.iconText}>{subject.title}</p>
             </label>
           </div>
         ))}
