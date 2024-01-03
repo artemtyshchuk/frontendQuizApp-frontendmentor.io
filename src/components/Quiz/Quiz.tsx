@@ -2,6 +2,7 @@ import styles from "./Quiz.module.scss";
 import { ReactComponent as CorrectIcon } from "assets/images/icon-correct.svg";
 import { ReactComponent as IncorrectIcon } from "assets/images/icon-incorrect.svg";
 import { ProgressBar } from "components/ProgressBar";
+import { useState } from "react";
 
 interface QuizProps {
   question?: string;
@@ -28,6 +29,7 @@ export const Quiz = ({
   onSubmitAnswer,
   onNextQuestion,
 }: QuizProps) => {
+  const [submited, setSubmited] = useState(false);
   const options = ["A", "B", "C", "D"];
 
   const answerIcons =
@@ -38,6 +40,19 @@ export const Quiz = ({
     ) : (
       ""
     );
+
+  const handleSubmit = () => {
+    onSubmitAnswer();
+    if (userChoice) {
+      setSubmited(true);
+    }
+  };
+
+  const handleNextQuestion = () => {
+    onNextQuestion();
+    setSubmited(false);
+  };
+
   return (
     <div className={styles.quiz}>
       <div className={styles.questionContainer}>
@@ -67,7 +82,7 @@ export const Quiz = ({
                   value={answer}
                   checked={userChoice === answer}
                   onChange={onAnswerButton}
-                  disabled={userChoice !== answer && !!userChoice}
+                  disabled={submited}
                 />
                 <label className={styles.label} htmlFor={`${index}-${answer}`}>
                   <div className={styles.icon}>
@@ -85,7 +100,7 @@ export const Quiz = ({
             <button
               type="button"
               title="submit answer"
-              onClick={onSubmitAnswer}
+              onClick={handleSubmit}
               className={styles.buttonSubmit}
             >
               Submit Answer
@@ -94,7 +109,7 @@ export const Quiz = ({
             <button
               type="button"
               title="next question"
-              onClick={onNextQuestion}
+              onClick={handleNextQuestion}
               className={styles.buttonNextQuestion}
             >
               Next Question
