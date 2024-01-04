@@ -5,6 +5,7 @@ import { Question } from "types/data";
 import data from "data.json";
 import { Quiz } from "components/Quiz";
 import { Header } from "components/Header";
+import { ResultPage } from "components/ResultPage";
 interface ContentProps {}
 
 export const Content = ({}: ContentProps) => {
@@ -55,6 +56,14 @@ export const Content = ({}: ContentProps) => {
     }
   };
 
+  const handlePlayAgainButton = () => {
+    setIsCompleted(false);
+    setSubject("");
+    setNumOfCurrentQuestion(0);
+    setCheckAnswer("");
+    setAnswer("");
+  };
+
   useEffect(() => {
     if (subject) {
       const questions = handleData(subject)[0].questions;
@@ -82,6 +91,14 @@ export const Content = ({}: ContentProps) => {
           onSubmitAnswer={handleSubmitAnswer}
           onNextQuestion={handleNextQuestion}
           message={isMessage}
+        />
+      )}
+
+      {isCompleted && (
+        <ResultPage
+          subject={subject}
+          score={score}
+          onPlayAgainButton={handlePlayAgainButton}
         />
       )}
     </div>

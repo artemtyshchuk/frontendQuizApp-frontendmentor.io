@@ -1,0 +1,125 @@
+:global {
+  body[data-theme="light"] {
+    --title: var(--darkNavy);
+    --scoreContainer: var(--white);
+    --scoreContainer-shadow: var(--lightShadow);
+    --outOf10: var(--greyNavy);
+  }
+  body[data-theme="dark"] {
+    --title: var(--white);
+    --scoreContainer: var(--navy);
+    --scoreContainer-shadow: var(--darkShadow);
+    --outOf10: var(--lightBluish);
+  }
+}
+
+.resultPage {
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.title {
+  color: var(--title);
+  font-family: Rubik;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 100%;
+}
+
+.subtitle {
+  color: var(--title);
+  font-family: Rubik;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.scoreContainer {
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  padding: 48px;
+
+  border-radius: 24px;
+  background: var(--scoreContainer);
+  box-shadow: 0px 16px 40px 0px var(--scoreContainer-shadow);
+}
+
+.subjectContainer {
+  padding-bottom: 40px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 56px auto;
+  column-gap: 24px;
+}
+
+.subject {
+  color: var(--title);
+  /* Heading S */
+  font-family: "Rubik";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 28px */
+}
+
+.scoreResult {
+  display: grid;
+  justify-items: center;
+}
+
+.yourScore {
+  color: var(--title);
+
+  /* Display */
+  font-family: Rubik;
+  font-size: 144px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 144px */
+}
+
+.outOf10 {
+  color: var(--outOf10);
+
+  /* Body M */
+  font-family: Rubik;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 36px */
+}
+
+.playAgainButton {
+  margin-top: 32px;
+  grid-column: 2/3;
+
+  color: var(--Pure-White, #fff);
+  /* Heading S */
+  font-family: Rubik;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 28px */
+
+  border: none;
+  height: 92px;
+  border-radius: 24px;
+  background: var(--Purple, #a729f5);
+  box-shadow: 0px 16px 40px 0px rgba(143, 160, 193, 0.14);
+  cursor: pointer;
+  &:hover {
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0.5) 100%
+      ),
+      var(--Purple, #a729f5);
+    box-shadow: 0px 16px 40px 0px rgba(143, 160, 193, 0.14);
+  }
+}
