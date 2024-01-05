@@ -73,7 +73,7 @@
 .label {
   padding: 20px;
 
-  display: grid;
+  display: flex;
   grid-template-columns: 56px auto;
   column-gap: 40px;
   cursor: pointer;
