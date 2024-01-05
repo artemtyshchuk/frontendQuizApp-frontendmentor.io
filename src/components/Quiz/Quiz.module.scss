@@ -64,6 +64,8 @@
   display: grid;
   width: 100%;
   min-height: 92px;
+  grid-template-rows: 1fr;
+
   padding: 15px 20px;
   align-items: center;
   border-radius: 24px;
@@ -157,13 +159,11 @@
 
 .isActive {
   border: 3px solid var(--Purple, #a729f5);
-  // background: var(--Pure-White, #fff);
   box-shadow: 0px 16px 40px 0px rgba(143, 160, 193, 0.14);
 }
 
 .correct {
   border: 3px solid var(--Green, #26d782);
-  // background: var(--Pure-White, #fff);
   box-shadow: 0px 16px 40px 0px rgba(143, 160, 193, 0.14);
 }
 
@@ -248,7 +248,7 @@
 
   .answerContainer {
     display: grid;
-    grid-template-rows: 1px auto;
+    grid-template-rows: 1fr;
     width: 100%;
     min-height: 64px;
     padding: 12px;
