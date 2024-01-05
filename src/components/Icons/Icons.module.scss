@@ -21,3 +21,14 @@
 .accessibility {
   background-color: #f6e7ff;
 }
+
+@media (max-width: 576px) {
+  .icons {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
+}

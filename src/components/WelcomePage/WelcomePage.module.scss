@@ -19,6 +19,7 @@
 }
 
 .welcomePage {
+  margin-top: 150px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 140px;
@@ -87,4 +88,165 @@
   font-weight: 500;
   line-height: 100%;
   outline: none;
+}
+
+@media (max-width: 1439px) {
+  //1201
+}
+
+@media (max-width: 1200px) {
+  //993
+  .welcomePage {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+  }
+
+  .titleRegular {
+    color: var(--titleRegular);
+    font-family: "Rubik";
+    font-size: 59px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 100%;
+  }
+
+  .titleBold {
+    color: var(--titleBold);
+    font-family: "Rubik";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  //769
+  .welcomePage {
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 64px;
+  }
+
+  .titleRegular {
+    color: var(--titleRegular);
+    font-family: "Rubik";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 100%;
+  }
+
+  .titleBold {
+    color: var(--titleBold);
+    font-family: "Rubik";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+  }
+
+  .subTitle {
+    margin-top: 16px;
+    color: var(--subTitle);
+    font-family: "Rubik";
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}
+
+@media (max-width: 768px) {
+  //577
+  .titleRegular {
+    color: var(--titleRegular);
+    font-family: "Rubik";
+    font-size: 59px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 100%;
+  }
+
+  .titleBold {
+    color: var(--titleBold);
+    font-family: "Rubik";
+    font-size: 59px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .welcomePage {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 40px;
+  }
+
+  .titleRegular {
+    color: var(--titleRegular);
+    font-family: "Rubik";
+    font-size: 39px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 100%;
+  }
+
+  .titleBold {
+    color: var(--titleBold);
+    font-family: "Rubik";
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+  }
+  .subTitle {
+    margin-top: 16px;
+    color: var(--subTitle);
+    font-family: "Rubik";
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  .subjectContainer {
+    display: grid;
+    align-content: space-around;
+    margin-bottom: 24px;
+    width: 100%;
+    height: 64px;
+    border-radius: 24px;
+    background: var(--subject-BG);
+    box-shadow: 0px 16px 40px 0px var(--subject-shadow);
+    border: none;
+    border: 3px solid transparent;
+  }
+
+  .label {
+    padding: 12px;
+
+    display: grid;
+    grid-template-columns: 40px auto;
+    column-gap: 16px;
+    cursor: pointer;
+  }
+
+  .iconText {
+    align-self: center;
+    color: var(--subject-text);
+    font-family: "Rubik";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    outline: none;
+  }
 }

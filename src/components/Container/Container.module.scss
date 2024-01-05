@@ -3,3 +3,42 @@
   margin-top: 50px;
   padding: 0 140px;
 }
+
+@media (max-width: 1439px) {
+  //1201
+  .container {
+    width: 100%;
+    margin-top: 50px;
+    padding: 0px 94px;
+  }
+}
+
+@media (max-width: 1200px) {
+  //993
+  .container {
+    width: 100%;
+    margin-top: 50px;
+    padding: 0px 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  //769
+  .container {
+    width: 100%;
+    margin-top: 50px;
+    padding: 0px 64px;
+  }
+}
+
+@media (max-width: 768px) {
+  //577
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+    margin-top: 50px;
+    padding: 0px 24px;
+  }
+}

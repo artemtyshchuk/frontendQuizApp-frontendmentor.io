@@ -117,9 +117,7 @@ export const Quiz = ({
           )}
           {!userChoice && message && (
             <p className={styles.message}>
-              <span>
-                <IncorrectIcon />
-              </span>
+              <IncorrectIcon />
               Please select an answer
             </p>
           )}
