@@ -26,7 +26,8 @@ body {
   background-color: #f4f6fa;
   background-image: url("./assets/images/pattern-background-desktop-light.svg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
+  background-position: center top;
   transition: 0.3s;
 }
 
@@ -34,7 +35,8 @@ body[data-theme="dark"] {
   background-color: #313e51;
   background-image: url("./assets/images/pattern-background-desktop-dark.svg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
+  background-position: center top;
   transition: 0.3s;
 }
 
