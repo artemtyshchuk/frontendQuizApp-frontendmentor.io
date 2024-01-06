@@ -229,11 +229,10 @@
   }
 
   .label {
-    padding: 12px;
+    // padding: 12px;
     grid-template-columns: 40px auto;
     column-gap: 16px;
     cursor: pointer;
-    z-index: 1000;
   }
 
   .iconText {
