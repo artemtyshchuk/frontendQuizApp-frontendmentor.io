@@ -71,6 +71,7 @@
   border-radius: 24px;
   background: var(--answerContainer);
   box-shadow: 0px 16px 40px 0px var(--answerContainer-shadow);
+  z-index: 1;
 }
 
 .label {
@@ -79,6 +80,7 @@
   column-gap: 40px;
   align-items: center;
   cursor: pointer;
+  z-index: 1000;
 }
 
 .answers {
