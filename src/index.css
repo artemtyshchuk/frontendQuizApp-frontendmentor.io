@@ -47,3 +47,8 @@ a {
 input[type="radio"] {
   appearance: none;
 }
+
+img {
+  width: 40px;
+  height: 40px;
+}
