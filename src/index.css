@@ -46,10 +46,12 @@ a {
 
 input[type="radio"] {
   appearance: none;
+  display: none;
 }
 
 input[type="radio"]:checked {
   appearance: none;
+  display: none;
 }
 
 input[type="radio"]:focus {
