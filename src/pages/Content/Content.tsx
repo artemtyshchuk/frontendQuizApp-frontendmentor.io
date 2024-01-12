@@ -6,9 +6,8 @@ import data from "data.json";
 import { Quiz } from "components/Quiz";
 import { Header } from "components/Header";
 import { ResultPage } from "components/ResultPage";
-interface ContentProps {}
 
-export const Content = ({}: ContentProps) => {
+export const Content = () => {
   const [subject, setSubject] = useState("");
   const [questionsData, setQuestionsData] = useState<Question[]>();
   const [isCompleted, setIsCompleted] = useState(false);
